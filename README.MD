@@ -4,4 +4,4 @@ Discord: WaffleAWT
 
 Video:
 
-https://github.com/user-attachments/assets/1126215a-db79-4bda-9a7b-62493811e3f9
+https://github.com/user-attachments/assets/20beed8d-7243-495c-a194-1df13bc4e117
