@@ -1,0 +1,59 @@
+[gd_scene load_steps=11 format=3 uid="uid://bd7ldvtddomtt"]
+
+[ext_resource type="Shader" path="res://Shaders/fire.gdshader" id="1_f64lk"]
+[ext_resource type="Texture2D" uid="uid://x0mco5haxeim" path="res://Assets/Textures/Effects/Fire Noise.png" id="2_tifj4"]
+[ext_resource type="Texture2D" uid="uid://drgjk82fqi5k6" path="res://Assets/Textures/Effects/Fire Mask.png" id="3_btupu"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8m8gc"]
+render_priority = 0
+shader = ExtResource("1_f64lk")
+shader_parameter/emission_intensity = 2.0
+shader_parameter/time_scale = 3.0
+shader_parameter/texture_scale = Vector2(1, 1)
+shader_parameter/edge_softness = 0.1
+shader_parameter/noise_texture = ExtResource("2_tifj4")
+shader_parameter/texture_mask = ExtResource("3_btupu")
+
+[sub_resource type="Gradient" id="Gradient_g07k2"]
+colors = PackedColorArray(0.98, 0.436917, 0.049, 1, 0.59, 0.1711, 0.178082, 0.482353)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_qayc6"]
+gradient = SubResource("Gradient_g07k2")
+width = 128
+
+[sub_resource type="Curve" id="Curve_k01lv"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.550725, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_jg1tb"]
+width = 128
+curve = SubResource("Curve_k01lv")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_4hemm"]
+lifetime_randomness = 0.8
+direction = Vector3(0, 1, 0)
+spread = 0.0
+initial_velocity_min = 0.5
+initial_velocity_max = 0.5
+gravity = Vector3(0, 0, 0)
+linear_accel_min = 4.0
+linear_accel_max = 4.0
+scale_min = 0.1
+scale_max = 0.75
+scale_curve = SubResource("CurveTexture_jg1tb")
+color_ramp = SubResource("GradientTexture1D_qayc6")
+
+[sub_resource type="QuadMesh" id="QuadMesh_s0bv0"]
+resource_local_to_scene = true
+size = Vector2(0.5, 0.5)
+
+[node name="Fire" type="GPUParticles3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0117699, 0.310108, 0.00798988)
+material_override = SubResource("ShaderMaterial_8m8gc")
+amount = 500
+lifetime = 0.6
+randomness = 0.75
+fixed_fps = 60
+draw_order = 1
+process_material = SubResource("ParticleProcessMaterial_4hemm")
+draw_pass_1 = SubResource("QuadMesh_s0bv0")

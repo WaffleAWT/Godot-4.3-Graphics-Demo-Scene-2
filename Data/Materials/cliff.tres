@@ -1,0 +1,19 @@
+[gd_resource type="StandardMaterial3D" load_steps=6 format=3 uid="uid://bmvcqwmbxvygq"]
+
+[ext_resource type="Texture2D" uid="uid://c3alqg1p8m520" path="res://Assets/Textures/Cliff/Rock029_2K-JPG_Color.jpg" id="1_ky16x"]
+[ext_resource type="Texture2D" uid="uid://tejrr2vcteyr" path="res://Assets/Textures/Cliff/Rock029_2K-JPG_AmbientOcclusion.jpg" id="2_hidbc"]
+[ext_resource type="Texture2D" uid="uid://b14vdf2jyb67n" path="res://Assets/Textures/Cliff/Rock029_2K-JPG_Displacement.jpg" id="3_7qx7f"]
+[ext_resource type="Texture2D" uid="uid://cw8hvswqhrqvc" path="res://Assets/Textures/Cliff/Rock029_2K-JPG_NormalGL.jpg" id="4_37xp3"]
+[ext_resource type="Texture2D" uid="uid://iwmj2odckelg" path="res://Assets/Textures/Cliff/Rock029_2K-JPG_Roughness.jpg" id="5_sm3t7"]
+
+[resource]
+albedo_texture = ExtResource("1_ky16x")
+roughness_texture = ExtResource("5_sm3t7")
+normal_enabled = true
+normal_texture = ExtResource("4_37xp3")
+ao_enabled = true
+ao_texture = ExtResource("2_hidbc")
+heightmap_enabled = true
+heightmap_texture = ExtResource("3_7qx7f")
+uv1_scale = Vector3(0.1, 0.1, 0.1)
+uv1_triplanar = true

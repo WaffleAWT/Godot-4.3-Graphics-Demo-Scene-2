@@ -1,0 +1,12 @@
+res://Scenes/world.tscn
+res://Data/Materials/sandstone.tres
+res://Data/Materials/sandstone2.tres
+res://Data/Materials/stone.tres
+res://Data/Materials/tiles.tres
+res://Data/Materials/sand.tres
+res://Data/Materials/cliff.tres
+res://Shaders/fire.gdshader
+res://Data/Effects/Fire/Blue.tres
+res://Scenes/torch.tscn
+res://Data/Effects/Fire/Red.tres
+res://Data/Materials/clay.tres

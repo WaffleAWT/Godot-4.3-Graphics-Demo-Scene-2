@@ -1,0 +1,19 @@
+[gd_resource type="StandardMaterial3D" load_steps=6 format=3 uid="uid://cmisjqbnsh8j7"]
+
+[ext_resource type="Texture2D" uid="uid://b0kqlufgjalph" path="res://Assets/Textures/Sandstone/Bricks083_2K-JPG_Color.jpg" id="1_0wg1e"]
+[ext_resource type="Texture2D" uid="uid://dnu16fpcsu2w7" path="res://Assets/Textures/Sandstone/Bricks083_2K-JPG_AmbientOcclusion.jpg" id="2_kjx1n"]
+[ext_resource type="Texture2D" uid="uid://cy1j6xoqkx1ll" path="res://Assets/Textures/Sandstone/Bricks083_2K-JPG_Displacement.jpg" id="3_lb7ra"]
+[ext_resource type="Texture2D" uid="uid://qijcwb76ttlb" path="res://Assets/Textures/Sandstone/Bricks083_2K-JPG_NormalGL.jpg" id="4_u2ibi"]
+[ext_resource type="Texture2D" uid="uid://bv1yhmb1jel5t" path="res://Assets/Textures/Sandstone/Bricks083_2K-JPG_Roughness.jpg" id="5_tu5p5"]
+
+[resource]
+albedo_texture = ExtResource("1_0wg1e")
+roughness_texture = ExtResource("5_tu5p5")
+normal_enabled = true
+normal_texture = ExtResource("4_u2ibi")
+ao_enabled = true
+ao_texture = ExtResource("2_kjx1n")
+heightmap_enabled = true
+heightmap_texture = ExtResource("3_lb7ra")
+uv1_scale = Vector3(0.25, 0.25, 0.25)
+uv1_triplanar = true
